@@ -550,9 +550,6 @@ const frontend = {
     makeCombinationsTable(possibilities, showAllDetails) {
         showAllDetails = (showAllDetails !== undefined) ? showAllDetails : false;
         const tablePreviewSize = 4;
-        possibilities.sort(function(a, b) {
-            return a.grade - b.grade;
-        });
         let table = "<table class='combinations'>";
         table += "<tr><td></td>" +
             "<td>Vertiefungs&shy;gebiete</td>" +
@@ -698,6 +695,19 @@ const frontend = {
             f.checkRules(showAllDetails);
         }, 70)
     },
+    hightlightBestBelegung(courses) {
+        function courseToSelector(course) {
+            if (course === 'bp')
+                return '#course-bp,#course-bp2';
+            return '#course-' + course;
+        }
+
+        $(courses
+            .map((course) => course.key)
+            .map(courseToSelector)
+            .join(',')).addClass('isInBestBelegung');
+
+    },
     /* used to check all rules and display them in div#messages */
     checkRules(showAllDetails) {
 
@@ -707,12 +717,14 @@ const frontend = {
         messageUl.empty();
         if (rules.length === 0) {
             const possibilities = wahlpflichtManager.possibleCombinations;
-            const bestGrade = possibilities.reduce(function(acc, curr) {
-                if (isNaN(curr.grade)) {
-                    return acc;
-                }
-                return Math.min(acc, curr.grade);
-            }, 10);
+
+            possibilities.sort(function(a, b) {
+                return a.grade - b.grade;
+            });
+            const bestGrade = possibilities[0].grade;
+
+            this.hightlightBestBelegung(possibilities[0]);
+
             let resultColor = '#316400';
             let topMessage = "Der Belegungsplan ist gültig! ";
             if (bestGrade < 10) {

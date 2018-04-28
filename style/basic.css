@@ -754,6 +754,9 @@ h3 {
 .highlight {
     background: #ffea00 !important;
 }
+.isInBestBelegung {
+    background: #ffeaff !important;
+}
 
 .dropHint {
     position: fixed;
