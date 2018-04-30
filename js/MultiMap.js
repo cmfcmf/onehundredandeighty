@@ -22,3 +22,4 @@ class MultiMap {
         return this.map.entries();
     }
 }
+module.exports = MultiMap;

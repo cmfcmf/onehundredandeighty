@@ -11,7 +11,6 @@
 	<script src="js/jquery.knubtip.js"></script>
 	<script src="js/jquery.knubselect.js"></script>
 	<script src="js/pdf.js"></script>
-	<script src="js/MultiMap.js"></script>
 </head>
 <body>
 	<a id="github-link" href="https://github.com/ErikBrendel/onehundredandeighty" target="_blank">
@@ -152,7 +151,8 @@
 	<div id="dropHint" class="dropHint">
 		~ Gib mir dein Transcript of records oder deine Studiendokumentation und ich sage dir, was du belegt hast ~
 	</div>
-	<script type="text/javascript">const module={};//for nodejs compatibility</script>
+	<script type="text/javascript">let module={};//for nodejs compatibility</script>
+	<script src="js/MultiMap.js"></script>
 	<script src="js/data.js"></script>
 	<script src="js/helper.js"></script>
 	<script src="js/logic.js"></script>
@@ -163,5 +163,6 @@
 	<script src="js/flavours/hpi-ba-2010.js"></script>
 	<script src="js/flavours/hpi-ba-2016.js"></script>
 	<script src="js/flavours/parseFlavour.js"></script>
+	<script type="text/javascript">module={};</script>
 </body>
 </html>
