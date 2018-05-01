@@ -7,7 +7,10 @@ class CartesianProduct {
         }
     }
     totalAmount() {
-        return this.arrayOfDimensions.map((a) => a.length).reduce(((a, b) => a * b), 1);
+        if (this.arrayOfDimensions.length === 0) {
+            return 0;
+        }
+        return this.arrayOfDimensions.map((a) => a.length).reduce(((a, b) => a * b));
     }
     next() {
         if (this.done) return;
