@@ -27,6 +27,8 @@ describe('examples', () => {
                 },
             }
         });
+        console.log(browser);
+        console.log(JSON.stringify(Object.keys(browser)));
 
         before(wdio.initSelenium);
 
