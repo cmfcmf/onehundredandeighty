@@ -18,7 +18,8 @@ function timeout(ms) {
 
 describe('examples', () => {
 
-    describe('wdio test', () => {
+    describe('wdio test', function() {
+        this.timeout(60000);
         const browser = wdio.getBrowser({
             desiredCapabilities: {
                 browserName: 'chrome',
@@ -27,8 +28,6 @@ describe('examples', () => {
                 },
             }
         });
-        console.log(browser);
-        console.log(JSON.stringify(Object.keys(browser)));
 
         before(wdio.initSelenium);
 
@@ -44,7 +43,7 @@ describe('examples', () => {
         it('Should return "onehundredandeighty" when asked about page title', wdio.wrap(function () {
             expect(browser.getTitle()).to.eq('onehundredandeighty');
         }));
-    }).timeout(60000);
+    })
 
 
     const examples = [];
