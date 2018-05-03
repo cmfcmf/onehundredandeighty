@@ -1,6 +1,7 @@
 const path = require('path');
 const expect = require('chai').expect;
 const wdio = require('wdio');
+const process = require('process');
 
 
 function getFileUrl(str) {
@@ -28,8 +29,14 @@ describe('examples', () => {
                 },
             }
         });
+        let seleniumProcess = undefined;
 
-        before(wdio.initSelenium);
+        before(function(done) {
+            wdio.initSelenium(function(err, process) {
+                seleniumProcess = process;
+                done(err, process);
+            });
+        });
 
         before(wdio.wrap(function() {
             browser.init();
@@ -38,12 +45,15 @@ describe('examples', () => {
 
         after(wdio.wrap(function() {
             browser.end();
+            if (seleniumProcess !== undefined) {
+                process.kill(seleniumProcess.pid);
+            }
         }));
 
         it('Should return "onehundredandeighty" when asked about page title', wdio.wrap(function () {
             expect(browser.getTitle()).to.eq('onehundredandeighty');
         }));
-    })
+    });
 
 
     const examples = [];
