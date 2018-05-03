@@ -2,7 +2,7 @@ const expect = require('chai').expect;
 
 describe('MultiMap.js', () => {
     const MultiMap = require('../../js/MultiMap.js');
-    it('creates empty lists for nen-existent keys', () => {
+    it('creates empty lists for non-existent keys', () => {
         const m = new MultiMap();
         expect(m.get('foo').length).to.eq([].length);
         expect(m.get('trolololol').length).to.eq([].length);
