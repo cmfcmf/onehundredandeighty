@@ -17,43 +17,41 @@ function timeout(ms) {
 }
 
 
-describe('examples', () => {
+describe('examples', function() {
+    this.timeout(60000);
 
-    describe('wdio test', function() {
-        this.timeout(60000);
-        const browser = wdio.getBrowser({
-            desiredCapabilities: {
-                browserName: 'chrome',
-                chromeOptions: {
-                    args: ['headless', 'disable-gpu', 'no-sandbox']
-                },
-            }
-        });
-        let seleniumProcess = undefined;
-
-        before(function(done) {
-            wdio.initSelenium(function(err, process) {
-                seleniumProcess = process;
-                done(err, process);
-            });
-        });
-
-        before(wdio.wrap(function() {
-            browser.init();
-            browser.url(getFileUrl("../index.html"));
-        }));
-
-        after(wdio.wrap(function() {
-            browser.end();
-            if (seleniumProcess !== undefined) {
-                process.kill(seleniumProcess.pid);
-            }
-        }));
-
-        it('Should return "onehundredandeighty" when asked about page title', wdio.wrap(function () {
-            expect(browser.getTitle()).to.eq('onehundredandeighty');
-        }));
+    const browser = wdio.getBrowser({
+        desiredCapabilities: {
+            browserName: 'chrome',
+            chromeOptions: {
+                args: ['headless', 'disable-gpu', 'no-sandbox']
+            },
+        }
     });
+    let seleniumProcess = undefined;
+
+    before(function(done) {
+        wdio.initSelenium(function(err, process) {
+            seleniumProcess = process;
+            done(err, process);
+        });
+    });
+
+    before(wdio.wrap(function() {
+        browser.init();
+        browser.url(getFileUrl("../index.html") + "?flavour=hpi-ba-2016");
+    }));
+
+    after(wdio.wrap(function() {
+        browser.end();
+        if (seleniumProcess !== undefined) {
+            process.kill(seleniumProcess.pid);
+        }
+    }));
+
+    it('Should return "onehundredandeighty" when asked about the page title', wdio.wrap(function () {
+        expect(browser.getTitle()).to.eq('onehundredandeighty');
+    }));
 
 
     const examples = [];
@@ -68,24 +66,26 @@ describe('examples', () => {
 
     for(let i = 0; i < 0/*examples.length*/; i++) {
         const example = examples[i];
-        it(`Belegung "${example.name}" should${example.isValid ? '' : ' not'} be valid`,  () => {
+        it(`Belegung "${example.name}" should${example.isValid ? '' : ' not'} be valid`, wdio.wrap(function() {
             const belegungen = example.belegungen;
 
-            //TODO karma here!
-            localStorage.clear();
-            //TODO move all courses back to the pool
-            for (const belegung of belegungen) {
-                Semester.get(0).take(belegung);
-            }
+            /*const title = browser.execute(function() {
+                return document.title;
+            });
+            console.log("title: " + JSON.stringify(title));/**/
 
-            const failingRules = ruleManager.checkAll();
-            const valid = failingRules.length === 0;
-            expect(valid).to.eq(example.isValid);
+            /*const valid = browser.execute(function(belegungen) {
+                localStorage.clear();
+                return window.data.length > 50;
+                //TODO move all courses back to the pool
+                for (const belegung of belegungen) {
+                    window.Semester.get(0).take(belegung);
+                }
+                const failingRules = window.ruleManager.checkAll();
+                return failingRules.length === 0;
+            }, belegungen);
+            expect(valid).to.eq(example.isValid);/**/
 
-
-            expect('Not implemenet yet!').to.be.not.ok;
-
-
-        });
+        }));
     }
 });

@@ -1,6 +1,6 @@
 module.exports = function(addExample) {
 
-    addExample('Empty', {}, false);
+    addExample('Empty', [], false);
 
     // to generate such a string from your current 180 configuration
     // result = ''; for (const p in data) { if(f.getSemester(p) >= 0) { result += p + ','; } } result
