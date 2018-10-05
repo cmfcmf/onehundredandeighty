@@ -239,7 +239,7 @@ const Course = class {
         }
     }
     openPage() {
-        const URL_PREFIX = "https://hpi.de/studium/lehrveranstaltungen/it-systems-engineering/lehrveranstaltung/course/";
+        const URL_PREFIX = "https://hpi.de/studium/lehrveranstaltungen/it-systems-engineering-ma/lehrveranstaltung/course/0/";
         let page = getCourseParameter(this.id, 'page');
         if (!page) return;
         if (!page.startsWith('http')) {
@@ -810,7 +810,7 @@ const frontend = {
 
             const semesterView = "<ul id='semester" + num + "' class='chosen courses'></ul>";
             $("#semester-view" + lineNumber).find("br").last().before(semesterView);
-            
+
             semesterManager.numberDisplayed += 1;
         }
         f.organizeSemesters();
@@ -857,7 +857,7 @@ const frontend = {
             }
         }
         else if (semesterManager.shownSemesters.length > semesterManager.numberDisplayed) {
-            while (semesterManager.shownSemesters.length !== semesterManager.numberDisplayed) {    
+            while (semesterManager.shownSemesters.length !== semesterManager.numberDisplayed) {
                 semesterManager.shownSemesters.pop();
             }
             // semesters did not change, so we dont have to initialize them

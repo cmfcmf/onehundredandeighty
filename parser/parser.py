@@ -10,7 +10,7 @@ import Queue
 
 import extractor
 
-LehrveranstaltungenIndexURL = "https://hpi.de/studium/lehrveranstaltungen/it-systems-engineering.html"
+LehrveranstaltungenIndexURL = "https://hpi.de/studium/lehrveranstaltungen/it-systems-engineering-ba.html"
 WSBaseUrl = "https://hpi.de/studium/lehrveranstaltungen/archiv/wintersemester-20"
 SSBaseUrl = "https://hpi.de/studium/lehrveranstaltungen/archiv/sommersemester-20"
 
@@ -121,7 +121,7 @@ def listOfLVs(urls):
 def parseLVPage(url):
     """parsed aus der Seite einer LV die gewünschten Informationen"""
     page = urllib2.urlopen(url)
-    
+
     for line in page:
         if line.strip().startswith('<div class="tx-ciuniversity-course"'):  # throw away unimportant lines
             break
@@ -139,7 +139,7 @@ def parseLVPage(url):
     shortName = extractor.shortenName(nameofLV)
     lvID = extractor.shortNameToID(shortName)
 
-    URL_PREFIX = 'https://hpi.de/studium/lehrveranstaltungen/it-systems-engineering/lehrveranstaltung/course/'
+    URL_PREFIX = 'https://hpi.de/studium/lehrveranstaltungen/it-systems-engineering-ma/lehrveranstaltung/course/0/'
     niceURL = url
     if niceURL.startswith(URL_PREFIX):
         niceURL = niceURL[len(URL_PREFIX):]
