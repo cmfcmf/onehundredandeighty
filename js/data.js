@@ -36,15 +36,18 @@ const data = {
         kurz: "AlgoRiddles",
         lehrform: ["Vorlesung", "Übung"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ws16_17, ws17_18],
+        semester: [ws16_17, ws17_18, ws18_19],
         pflicht: false,
         empfohlen: "",
         vertiefung: [ISAE, OSIS, SAMT],
         cp: 3,
         dozent: ["Dr. Pascal Lenzner", "Dr. Timo Kötzing", "Prof. Dr. Tobias Friedrich"],
         nameLV: "Algorithmic Problem Solving",
-        page: "0/wintersemester-20172018-algorithmic-problem-solving-1.html",
+        page: "0/wintersemester-20182019-algorithmic-problem-solving.html",
         specific: {
+            WS17: {
+                page: "0/wintersemester-20172018-algorithmic-problem-solving-1.html",
+            },
             WS16: {
                 page: "2016/wintersemester-20162017-algorithmic-problem-solving.html",
             },
@@ -73,7 +76,7 @@ const data = {
         empfohlen: "",
         vertiefung: [BPET, OSIS],
         cp: 6,
-        dozent: ["Prof. Dr. Emmanuel Müller"],
+        dozent: [],
         nameLV: "Big Data Analytics",
         page: "0/wintersemester-20172018-big-data-analytics.html",
         specific: {
@@ -87,23 +90,23 @@ const data = {
     },
     bdanalyticslab: {
         kurz: "BD Analytics Lab",
-        lehrform: ["Projekt", "Seminar"],
+        lehrform: ["Projekt"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss16, ss17, ss18],
         pflicht: false,
         empfohlen: "",
         vertiefung: [BPET, OSIS],
         cp: 6,
-        dozent: ["Fabian Geier", "Prof. Dr. Emmanuel Müller", "Thomas Goerttler"],
+        dozent: ["Thomas Goerttler"],
         nameLV: "Big Data Analytics Lab",
         page: "0/sommersemester-2018-big-data-analytics-lab.html",
         specific: {
             SS17: {
-                dozent: ["Erik Scharwächter", "Fabian Geier", "Prof. Dr. Emmanuel Müller"],
+                dozent: [],
                 page: "0/sommersemester-2017-big-data-analytics-lab.html",
             },
             SS16: {
-                dozent: ["Prof. Dr. Emmanuel Müller"],
+                dozent: [],
                 page: "2016/sommersemester-2016-big-data-analytics-lab.html",
             },
         }
@@ -112,15 +115,20 @@ const data = {
         kurz: "BD Security Analytics",
         lehrform: ["Projekt", "Seminar"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ws17_18],
+        semester: [ws17_18, ws18_19],
         pflicht: false,
         empfohlen: "",
         vertiefung: [ISAE, OSIS],
         cp: 6,
-        dozent: ["Dr. Feng Cheng", "Prof. Dr. Christoph Meinel"],
+        dozent: ["Dr. Feng Cheng", "Pejman Najafi"],
         nameLV: "Big Data Security Analytics",
-        page: "0/wintersemester-20172018-big-data-security-analytics.html",
-        specific: {}
+        page: "0/wintersemester-20182019-big-data-security-analytics.html",
+        specific: {
+            WS17: {
+                dozent: ["Dr. Feng Cheng", "Prof. Dr. Christoph Meinel"],
+                page: "0/wintersemester-20172018-big-data-security-analytics.html",
+            },
+        }
     },
     beautifuldata: {
         kurz: "Beautiful Data",
@@ -138,7 +146,7 @@ const data = {
     },
     bildundvideoprozessierung: {
         kurz: "Bild- und<br />Videoprozessierung",
-        lehrform: ["Projekt", "Seminar"],
+        lehrform: ["Projekt"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws15_16],
         pflicht: false,
@@ -203,6 +211,20 @@ const data = {
             },
         }
     },
+    bs1: {
+        kurz: "BS I",
+        lehrform: ["Vorlesung", "Übung"],
+        modul: ["BS"],
+        semester: [ws18_19],
+        pflicht: false,
+        empfohlen: "",
+        vertiefung: [],
+        cp: 6,
+        dozent: ["Prof. Dr. Andreas Polze"],
+        nameLV: "Betriebssysteme I",
+        page: "0/wintersemester-20182019-betriebssysteme-i.html",
+        specific: {}
+    },
     bs2: {
         kurz: "BS II",
         lehrform: ["Vorlesung", "Übung"],
@@ -239,12 +261,12 @@ const data = {
         empfohlen: "",
         vertiefung: [BPET, OSIS],
         cp: 6,
-        dozent: ["Kimon Batoulis", "Luise Pufahl"],
+        dozent: ["Dr. Luise Pufahl", "Kimon Batoulis"],
         nameLV: "Business Event Processing",
         page: "0/sommersemester-2017-business-event-processing.html",
         specific: {
             SS16: {
-                dozent: ["Kimon Batoulis", "Luise Pufahl", "Prof. Dr. Mathias Weske"],
+                dozent: ["Dr. Luise Pufahl", "Kimon Batoulis", "Prof. Dr. Mathias Weske"],
                 page: "2016/sommersemester-2016-business-event-processing.html",
             },
         }
@@ -258,14 +280,14 @@ const data = {
         empfohlen: "",
         vertiefung: [BPET, OSIS],
         cp: 6,
-        dozent: ["Luise Pufahl", "Prof. Dr. Mathias Weske"],
+        dozent: ["Dr. Luise Pufahl", "Prof. Dr. Mathias Weske"],
         nameLV: "Business Process Simulation",
         page: "0/wintersemester-20172018-business-process-simulation.html",
         specific: {}
     },
     bva: {
         kurz: "BVA",
-        lehrform: ["Projekt", "Seminar"],
+        lehrform: ["Projekt"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws16_17],
         pflicht: false,
@@ -280,26 +302,27 @@ const data = {
     cg1: {
         kurz: "CG I",
         lehrform: ["Vorlesung", "Übung"],
-        modul: ["SB1", "Vertiefungsgebiete"],
-        semester: [ss15, ws15_16, ws16_17, ws17_18],
+        modul: ["SB1"],
+        semester: [ss15, ws15_16, ws16_17, ws17_18, ws18_19],
         pflicht: false,
         empfohlen: "",
-        vertiefung: [HCGT],
+        vertiefung: [],
         cp: 6,
-        dozent: ["Dr. Matthias Trapp"],
+        dozent: ["Prof. Dr. Jürgen Döllner"],
         nameLV: "3D-Computergrafik I",
-        page: "0/wintersemester-20172018-3d-computergrafik-i.html",
+        page: "0/wintersemester-20182019-3d-computergrafik-i.html",
         specific: {
             WS15: {
-                dozent: ["Prof. Dr. Jürgen Döllner"],
                 page: "2015/wintersemester-20152016-3d-computergrafik-i.html",
             },
+            WS17: {
+                dozent: ["Dr. Matthias Trapp"],
+                page: "0/wintersemester-20172018-3d-computergrafik-i.html",
+            },
             WS16: {
-                dozent: ["Prof. Dr. Jürgen Döllner"],
                 page: "2016/wintersemester-20162017-3d-computergrafik-i.html",
             },
             SS15: {
-                dozent: ["Prof. Dr. Jürgen Döllner"],
                 page: "2015/sommersemester-2015-3d-computergrafik-i.html",
             },
         }
@@ -357,7 +380,7 @@ const data = {
     },
     compprog: {
         kurz: "CompProg",
-        lehrform: ["Projekt", "Seminar"],
+        lehrform: ["Projekt"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss16, ss17, ss18],
         pflicht: false,
@@ -379,31 +402,22 @@ const data = {
     },
     copsandrobbers: {
         kurz: "Cops and Robbers",
-        lehrform: ["Projekt", "Seminar"],
+        lehrform: ["Projekt"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ss15, ss16, ss17, ss18],
+        semester: [ss15, ss16, ss17],
         pflicht: false,
         empfohlen: "",
         vertiefung: [ISAE, OSIS, SAMT],
         cp: 6,
-        dozent: ["Dr. Feng Cheng"],
-        nameLV: "Cops &amp; Robbers",
-        page: "0/sommersemester-2018-cops-robbers.html",
+        dozent: ["Dr. Feng Cheng", "Prof. Dr. Christoph Meinel"],
+        nameLV: "Cops and Robbers",
+        page: "0/sommersemester-2017-cops-and-robbers.html",
         specific: {
             SS15: {
-                dozent: ["Dr. Feng Cheng", "Prof. Dr. Christoph Meinel"],
                 page: "2015/sommersemester-2015-cops-and-robbers.html",
-                nameLV: "Cops and Robbers",
-            },
-            SS17: {
-                dozent: ["Dr. Feng Cheng", "Prof. Dr. Christoph Meinel"],
-                page: "0/sommersemester-2017-cops-and-robbers.html",
-                nameLV: "Cops and Robbers",
             },
             SS16: {
-                dozent: ["Dr. Feng Cheng", "Prof. Dr. Christoph Meinel"],
                 page: "2016/sommersemester-2016-cops-and-robbers.html",
-                nameLV: "Cops and Robbers",
             },
         }
     },
@@ -416,7 +430,7 @@ const data = {
         empfohlen: "",
         vertiefung: [BPET, OSIS],
         cp: 3,
-        dozent: ["Dr. Matthias Uflacker", "Dr. Ralf Krestel", "Prof. Dr. Emmanuel Müller", "Prof. Dr. Felix Naumann"],
+        dozent: ["Dr. Matthias Uflacker", "Dr. Ralf Krestel", "Prof. Dr. Felix Naumann"],
         nameLV: "Data Engineering in der Praxis - Ringvorlesung",
         page: "0/wintersemester-20172018-data-engineering-in-der-praxis-ringvorlesung-1.html",
         specific: {}
@@ -452,19 +466,38 @@ const data = {
         kurz: "DBS II",
         lehrform: ["Vorlesung", "Übung"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ws15_16, ws17_18],
+        semester: [ws15_16, ws17_18, ws18_19],
         pflicht: false,
         empfohlen: "",
         vertiefung: [BPET, OSIS],
         cp: 6,
-        dozent: ["Prof. Dr. Felix Naumann"],
+        dozent: ["Leon Bornemann", "Prof. Dr. Felix Naumann"],
         nameLV: "Datenbanksysteme II",
-        page: "0/wintersemester-20172018-datenbanksysteme-ii.html",
+        page: "0/wintersemester-20182019-datenbanksysteme-ii.html",
         specific: {
             WS15: {
+                dozent: ["Prof. Dr. Felix Naumann"],
                 page: "2015/wintersemester-20152016-datenbanksysteme-ii.html",
             },
+            WS17: {
+                dozent: ["Prof. Dr. Felix Naumann"],
+                page: "0/wintersemester-20172018-datenbanksysteme-ii.html",
+            },
         }
+    },
+    digitalebildverarbeitung: {
+        kurz: "Digitale Bildverarbeitung",
+        lehrform: ["Projekt", "Seminar"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws18_19],
+        pflicht: false,
+        empfohlen: "",
+        vertiefung: [HCGT, ISAE, OSIS],
+        cp: 6,
+        dozent: ["Amir Semmo", "Dr. Matthias Trapp"],
+        nameLV: "Digitale Bildverarbeitung",
+        page: "0/wintersemester-20182019-digitale-bildverarbeitung.html",
+        specific: {}
     },
     diskretestrukturen: {
         kurz: "Diskrete Strukturen",
@@ -484,20 +517,21 @@ const data = {
         kurz: "D-School Advanced Track",
         lehrform: ["Projekt", "Seminar"],
         modul: ["Softskills"],
-        semester: [ss15, ss16, ss17, ss18, ws16_17, ws17_18],
+        semester: [ss15, ss16, ss17, ss18, ws17_18, ws18_19],
         pflicht: false,
         empfohlen: "",
         vertiefung: [],
         cp: 9,
         dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
         nameLV: "D-School Advanced Track",
-        page: "0/sommersemester-2018-d-school-advanced-track.html",
+        page: "0/wintersemester-20182019-d-school-advanced-track.html",
         specific: {
             WS17: {
                 page: "2015/wintersemester-20172018-d-school-advanced-track.html",
             },
-            WS16: {
-                page: "2016/wintersemester-20162017-d-school-advanced-track.html",
+            SS18: {
+                dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg", "Stefanie Gerken"],
+                page: "0/sommersemester-2018-d-school-advanced-track.html",
             },
             SS15: {
                 page: "2015/sommersemester-2015-d-school-advanced-track.html",
@@ -514,70 +548,86 @@ const data = {
         kurz: "D-School Basic Track",
         lehrform: ["Projekt", "Seminar"],
         modul: ["Softskills"],
-        semester: [ss15, ss16, ss17, ss18, ws15_16, ws16_17, ws17_18],
+        semester: [ss15, ss16, ss17, ss18, ws15_16, ws17_18, ws18_19],
         pflicht: false,
         empfohlen: "",
         vertiefung: [],
         cp: 9,
-        dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
+        dozent: ["Christian Smirnow", "Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
         nameLV: "D-School Basic Track",
-        page: "0/sommersemester-2018-d-school-basic-track.html",
+        page: "0/wintersemester-20182019-d-school-basic-track.html",
         specific: {
             WS15: {
+                dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
                 page: "2015/wintersemester-20152016-d-school-basic-track.html",
             },
             WS17: {
+                dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
                 page: "0/wintersemester-20172018-d-school-basic-track.html",
             },
-            WS16: {
-                page: "2016/wintersemester-20162017-d-school-basic-track.html",
+            SS18: {
+                page: "0/sommersemester-2018-d-school-basic-track.html",
             },
             SS15: {
+                dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
                 page: "2015/sommersemester-2015-d-school-basic-track.html",
             },
             SS17: {
+                dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
                 page: "0/sommersemester-2017-d-school-basic-track.html",
             },
             SS16: {
+                dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
                 page: "2016/sommersemester-2016-d-school-basic-track.html",
             },
         }
     },
     dschoolfirsttrack: {
         kurz: "D-School First Track",
-        lehrform: ["Projekt", "Seminar"],
+        lehrform: ["Projekt:", "Seminar"],
         modul: ["Softskills"],
         semester: [ss15, ss16, ss17, ss18, ws15_16, ws16_17, ws17_18],
         pflicht: false,
         empfohlen: "",
         vertiefung: [],
         cp: 3,
-        dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
+        dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg", "Samuel Tschepe"],
         nameLV: "D-School First Track: Introduction to Design Thinking: Bring Ideas to Life",
         page: "0/sommersemester-2018-d-school-first-track-introduction-to-design-thinking-bring-ideas-to-life.html",
         specific: {
             WS15: {
+                lehrform: ["Projekt", "Seminar"],
+                dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
                 page: "2015/wintersemester-20152016-d-school-first-track-introduction-to-design-thinking.html",
                 nameLV: "D-School First Track: Introduction to Design Thinking",
             },
             WS17: {
+                lehrform: ["Projekt", "Seminar"],
+                dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
                 page: "0/wintersemester-20172018-d-school-first-track-introduction-to-design-thinking-from-inspiration-to.html",
                 nameLV: "D-School First Track: Introduction to Design Thinking. From Inspiration to Ideas",
             },
             WS16: {
+                lehrform: ["Projekt", "Seminar"],
+                dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
                 page: "2016/wintersemester-20162017-d-school-first-track-introduction-to-design-thinking.html",
                 nameLV: "D-School First Track: Introduction to Design Thinking",
             },
             SS15: {
+                lehrform: ["Projekt", "Seminar"],
+                dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
                 page: "2015/sommersemester-2015-d-school-first-track-introduction-to-design-thinking.html",
                 nameLV: "D-School First Track: Introduction to Design Thinking",
             },
             SS17: {
+                lehrform: ["Projekt", "Seminar"],
                 dozent: ["Dr. Claudia Nicolai", "Jeremias Schmitt", "Prof. Ulrich Weinberg"],
                 page: "0/sommersemester-2017-d-school-first-track-introduction-to-design-thinking-bring-ideas-to-life.html",
                 nameLV: "D-School First Track: Introduction to Design Thinking. Bring Ideas to Life",
             },
             SS16: {
+                lehrform: ["Projekt", "Seminar"],
+                dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
                 page: "2016/sommersemester-2016-d-school-first-track-introduction-to-design-thinking.html",
                 nameLV: "D-School First Track: Introduction to Design Thinking",
             },
@@ -611,6 +661,20 @@ const data = {
         page: "0/sommersemester-2017-einfuehrung-informationsvisualisierung.html",
         specific: {}
     },
+    einfuehrunginsoftwareanalytics: {
+        kurz: "Einführung in<br />Software Analytics",
+        lehrform: ["Vorlesung", "Übung"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws18_19],
+        pflicht: false,
+        empfohlen: "",
+        vertiefung: [HCGT, OSIS, SAMT],
+        cp: 3,
+        dozent: ["Prof. Dr. Jürgen Döllner"],
+        nameLV: "Einführung in Software Analytics",
+        page: "0/wintersemester-20182019-einfuehrung-in-software-analytics.html",
+        specific: {}
+    },
     einfuehrunginvisualanalytics: {
         kurz: "Einführung in<br />Visual Analytics",
         lehrform: ["Projekt", "Seminar"],
@@ -629,14 +693,14 @@ const data = {
         kurz: "Englisch (Level 1)",
         lehrform: ["Seminar"],
         modul: ["Softskills"],
-        semester: [ss15, ss16, ss17, ss18, ws15_16, ws16_17, ws17_18],
+        semester: [ss15, ss16, ss17, ss18, ws15_16, ws16_17, ws17_18, ws18_19],
         pflicht: false,
         empfohlen: "",
         vertiefung: [],
         cp: 3,
         dozent: ["David Meier"],
         nameLV: "Fachspezifisches Englisch (Level 1)",
-        page: "0/sommersemester-2018-fachspezifisches-englisch-level-1.html",
+        page: "0/wintersemester-20182019-fachspezifisches-englisch-level-1.html",
         specific: {
             WS15: {
                 page: "2015/wintersemester-20152016-fachspezifisches-englisch-level-1.html",
@@ -646,6 +710,9 @@ const data = {
             },
             WS16: {
                 page: "2016/wintersemester-20162017-fachspezifisches-englisch-level-1.html",
+            },
+            SS18: {
+                page: "0/sommersemester-2018-fachspezifisches-englisch-level-1.html",
             },
             SS15: {
                 page: "2015/sommersemester-2015-fachspezifisches-englisch-level-1.html",
@@ -662,14 +729,14 @@ const data = {
         kurz: "Englisch (Level 2)",
         lehrform: ["Seminar"],
         modul: ["Softskills"],
-        semester: [ss15, ss16, ss17, ss18, ws15_16, ws16_17, ws17_18],
+        semester: [ss15, ss16, ss17, ss18, ws15_16, ws16_17, ws17_18, ws18_19],
         pflicht: false,
         empfohlen: "",
         vertiefung: [],
         cp: 3,
         dozent: ["David Meier"],
         nameLV: "Fachspezifisches Englisch (Level 2)",
-        page: "0/sommersemester-2018-fachspezifisches-englisch-level-2.html",
+        page: "0/wintersemester-20182019-fachspezifisches-englisch-level-2.html",
         specific: {
             WS15: {
                 page: "2015/wintersemester-20152016-fachspezifisches-englisch-level-2.html",
@@ -679,6 +746,9 @@ const data = {
             },
             WS16: {
                 page: "2016/wintersemester-20162017-fachspezifisches-englisch-level-2.html",
+            },
+            SS18: {
+                page: "0/sommersemester-2018-fachspezifisches-englisch-level-2.html",
             },
             SS15: {
                 page: "2015/sommersemester-2015-fachspezifisches-englisch-level-2.html",
@@ -714,7 +784,7 @@ const data = {
         empfohlen: "",
         vertiefung: [HCGT, OSIS, SAMT],
         cp: 6,
-        dozent: ["Daniel Limberger", "Prof. Dr. Jürgen Döllner", "Stefan Buschmann", "Willy Scheibel"],
+        dozent: ["Daniel Limberger", "Prof. Dr. Jürgen Döllner", "Willy Scheibel"],
         nameLV: "Games of Life",
         page: "0/sommersemester-2018-games-of-life.html",
         specific: {}
@@ -723,17 +793,20 @@ const data = {
         kurz: "GdS",
         lehrform: ["Vorlesung", "Übung"],
         modul: ["Grundlagen IT-Systems Engineering"],
-        semester: [ws15_16, ws16_17, ws17_18],
+        semester: [ws15_16, ws16_17, ws17_18, ws18_19],
         pflicht: true,
         empfohlen: 1,
         vertiefung: [],
         cp: 6,
         dozent: ["Dr.-Ing. Ralf Wollowski"],
         nameLV: "Grundlagen digitaler Systeme",
-        page: "0/wintersemester-20172018-grundlagen-digitaler-systeme.html",
+        page: "0/wintersemester-20182019-grundlagen-digitaler-systeme.html",
         specific: {
             WS15: {
                 page: "2015/wintersemester-20152016-grundlagen-digitaler-systeme.html",
+            },
+            WS17: {
+                page: "0/wintersemester-20172018-grundlagen-digitaler-systeme.html",
             },
             WS16: {
                 page: "2016/wintersemester-20162017-grundlagen-digitaler-systeme.html",
@@ -749,7 +822,7 @@ const data = {
         empfohlen: "",
         vertiefung: [HCGT, ISAE],
         cp: 6,
-        dozent: ["Daniel Limberger", "Prof. Dr. Jürgen Döllner", "Stefan Buschmann"],
+        dozent: ["Daniel Limberger", "Prof. Dr. Jürgen Döllner"],
         nameLV: "Grafikprogramming mit OpenGL und C++",
         page: "0/wintersemester-20172018-grafikprogramming-mit-opengl-und-c.html",
         specific: {}
@@ -818,15 +891,18 @@ const data = {
         kurz: "HCI II",
         lehrform: ["Vorlesung"],
         modul: ["SB4", "Vertiefungsgebiete"],
-        semester: [ss15, ss17, ws17_18],
+        semester: [ss15, ss17, ws17_18, ws18_19],
         pflicht: false,
         empfohlen: "",
         vertiefung: [HCGT, OSIS, SAMT],
         cp: 6,
         dozent: ["Prof. Dr. Patrick Baudisch"],
         nameLV: "Building Interactive Devices",
-        page: "0/wintersemester-20172018-building-interactive-devices.html",
+        page: "0/wintersemester-20182019-building-interactive-devices.html",
         specific: {
+            WS17: {
+                page: "0/wintersemester-20172018-building-interactive-devices.html",
+            },
             SS15: {
                 page: "2015/sommersemester-2015-hci-building-interactive-devices-and-computer-vision.html",
                 nameLV: "HCI: Building Interactive Devices and Computer Vision",
@@ -838,7 +914,7 @@ const data = {
     },
     hcipsaugmentrealityvirtualrealityand: {
         kurz: "[HCI PS] Augment Reality,<br />Virtual Reality, and ...",
-        lehrform: ["Projekt", "Seminar"],
+        lehrform: ["Projekt"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss17],
         pflicht: false,
@@ -852,7 +928,7 @@ const data = {
     },
     hcipsbuildinginteractivesystemsbasedon: {
         kurz: "[HCI PS] Building Interactive<br />Systems based on ...",
-        lehrform: ["Projekt", "Seminar"],
+        lehrform: ["Projekt"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws15_16],
         pflicht: false,
@@ -866,7 +942,7 @@ const data = {
     },
     hcipsbuildinginteractivesystemsfrom3dp: {
         kurz: "[HCI PS] Building Interactive<br />Systems from 3D-P...",
-        lehrform: ["Projekt", "Seminar"],
+        lehrform: ["Projekt"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss15],
         pflicht: false,
@@ -880,7 +956,7 @@ const data = {
     },
     hcipspersonalfabricationandhaptics: {
         kurz: "[HCI PS] Personal<br />Fabrication and Haptics",
-        lehrform: ["Projekt", "Seminar"],
+        lehrform: ["Projekt"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws16_17],
         pflicht: false,
@@ -906,9 +982,23 @@ const data = {
         page: "2016/sommersemester-2016-hci-project-seminar-personal-fabrication-and-interaction.html",
         specific: {}
     },
+    hcipspersonalfabricationvitualreality: {
+        kurz: "[HCI PS] Personal Fabrication,<br />Vitual reality, ...",
+        lehrform: ["Projekt", "Seminar"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws18_19],
+        pflicht: false,
+        empfohlen: "",
+        vertiefung: [HCGT],
+        cp: 6,
+        dozent: ["Prof. Dr. Patrick Baudisch"],
+        nameLV: "HCI Project Seminar: Personal Fabrication, Vitual reality, and Haptics",
+        page: "0/wintersemester-20182019-hci-project-seminar-personal-fabrication-vitual-reality-and-haptics.html",
+        specific: {}
+    },
     hcipsroboticscodeand3dprinting: {
         kurz: "[HCI PS] Robotics,<br />Code, and 3D Printing",
-        lehrform: ["Projekt", "Seminar"],
+        lehrform: ["Projekt"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws17_18],
         pflicht: false,
@@ -922,7 +1012,7 @@ const data = {
     },
     hcipsvirtualreality3dprintingand3d1: {
         kurz: "[HCI PS] Virtual Reality,<br />3D Printing, and 3D I...",
-        lehrform: ["Projekt", "Seminar"],
+        lehrform: ["Projekt"],
         modul: ["Vertiefungsgebiete"],
         semester: [ss18],
         pflicht: false,
@@ -972,7 +1062,7 @@ const data = {
     },
     informationvisualisationtechniques: {
         kurz: "Information<br />Visualisation Techniques",
-        lehrform: ["Projekt", "Seminar"],
+        lehrform: ["Projekt"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws17_18],
         pflicht: false,
@@ -982,6 +1072,34 @@ const data = {
         dozent: ["Prof. Dr. Jürgen Döllner"],
         nameLV: "Information Visualisation Techniques for Industrie 4.0",
         page: "0/wintersemester-20172018-information-visualisation-techniques-for-industrie-40.html",
+        specific: {}
+    },
+    internetsecurity: {
+        kurz: "Internet Security",
+        lehrform: ["Vorlesung", "Übung"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws18_19],
+        pflicht: false,
+        empfohlen: "",
+        vertiefung: [ISAE, OSIS],
+        cp: 6,
+        dozent: ["Prof. Dr. Christoph Meinel"],
+        nameLV: "Internet Security - Weaknesses and Targets",
+        page: "0/wintersemester-20182019-internet-security-weaknesses-and-targets.html",
+        specific: {}
+    },
+    introductiontodesignthinking: {
+        kurz: "Introduction to<br />Design Thinking",
+        lehrform: ["Projekt", "Seminar"],
+        modul: ["Softskills"],
+        semester: [ws18_19],
+        pflicht: false,
+        empfohlen: "",
+        vertiefung: [],
+        cp: 3,
+        dozent: ["Dr. Claudia Nicolai", "Prof. Ulrich Weinberg"],
+        nameLV: "Introduction to Design Thinking: From Inspirations to Ideas",
+        page: "0/wintersemester-20182019-introduction-to-design-thinking-from-inspirations-to-ideas.html",
         specific: {}
     },
     isec: {
@@ -1009,7 +1127,7 @@ const data = {
         kurz: "Klubsprecher",
         lehrform: [],
         modul: ["Softskills"],
-        semester: [ss15, ss16, ss17, ss18, ws15_16, ws16_17, ws17_18],
+        semester: [ss15, ss16, ss17, ss18, ws15_16, ws16_17, ws17_18, ws18_19],
         pflicht: "",
         empfohlen: "",
         vertiefung: [],
@@ -1055,14 +1173,14 @@ const data = {
         kurz: "Lerntechniken<br />und Strategien",
         lehrform: ["Seminar"],
         modul: ["Softskills"],
-        semester: [ss15, ss16, ss17, ss18, ws15_16, ws16_17, ws17_18],
+        semester: [ss15, ss16, ss17, ss18, ws15_16, ws16_17, ws17_18, ws18_19],
         pflicht: false,
         empfohlen: "",
         vertiefung: [],
         cp: 3,
         dozent: ["Dr. Christiane Potzner"],
         nameLV: "Lerntechniken und Strategien zur Prüfungsvorbereitung",
-        page: "0/sommersemester-2018-lerntechniken-und-strategien-zur-pruefungsvorbereitung.html",
+        page: "0/wintersemester-20182019-lerntechniken-und-strategien-zur-pruefungsvorbereitung.html",
         specific: {
             WS15: {
                 dozent: ["Dr. Rolf Specht"],
@@ -1075,6 +1193,9 @@ const data = {
             },
             WS16: {
                 page: "2016/wintersemester-20162017-lerntechniken-und-strategien-zur-pruefungsvorbereitung.html",
+            },
+            SS18: {
+                page: "0/sommersemester-2018-lerntechniken-und-strategien-zur-pruefungsvorbereitung.html",
             },
             SS15: {
                 dozent: ["Dr. Rolf Specht"],
@@ -1111,17 +1232,20 @@ const data = {
         kurz: "Mathematik I",
         lehrform: ["Vorlesung", "Übung"],
         modul: ["Mathematische und theoretische Grundlagen"],
-        semester: [ws15_16, ws16_17, ws17_18],
+        semester: [ws15_16, ws16_17, ws17_18, ws18_19],
         pflicht: true,
         empfohlen: 1,
         vertiefung: [],
         cp: 6,
         dozent: ["Prof. Dr. Christoph Meinel"],
         nameLV: "Mathematik I - Diskrete Strukturen und Logik",
-        page: "0/wintersemester-20172018-mathematik-i-diskrete-strukturen-und-logik.html",
+        page: "0/wintersemester-20182019-mathematik-i-diskrete-strukturen-und-logik.html",
         specific: {
             WS15: {
                 page: "2015/wintersemester-20152016-mathematik-i-diskrete-strukturen-und-logik.html",
+            },
+            WS17: {
+                page: "0/wintersemester-20172018-mathematik-i-diskrete-strukturen-und-logik.html",
             },
             WS16: {
                 page: "2016/wintersemester-20162017-mathematik-i-diskrete-strukturen-und-logik.html",
@@ -1156,18 +1280,22 @@ const data = {
         kurz: "Mod I",
         lehrform: ["Vorlesung", "Übung"],
         modul: ["Softwaretechnik und Modellierung"],
-        semester: [ws15_16, ws16_17, ws17_18],
+        semester: [ws15_16, ws16_17, ws17_18, ws18_19],
         pflicht: true,
         empfohlen: 1,
         vertiefung: [],
         cp: 6,
-        dozent: ["Christian Zöllner", "Joachim Hänsel", "Maria Maximova", "Prof. Dr. Holger Giese"],
+        dozent: ["Prof. Dr. Mathias Weske", "Stephan Haarmann"],
         nameLV: "Modellierung I",
-        page: "0/wintersemester-20172018-modellierung-i.html",
+        page: "0/wintersemester-20182019-modellierung-i.html",
         specific: {
             WS15: {
                 dozent: ["Prof. Dr. Holger Giese", "Thomas Vogel"],
                 page: "2015/wintersemester-20152016-modellierung-i.html",
+            },
+            WS17: {
+                dozent: ["Christian Zöllner", "Joachim Hänsel", "Maria Maximova", "Prof. Dr. Holger Giese"],
+                page: "0/wintersemester-20172018-modellierung-i.html",
             },
             WS16: {
                 dozent: ["Prof. Dr. Mathias Weske"],
@@ -1218,16 +1346,16 @@ const data = {
     },
     pem: {
         kurz: "PEM",
-        lehrform: ["Seminar"],
+        lehrform: ["Blockseminar"],
         modul: ["PEM"],
-        semester: [ss15, ss16, ss17, ss18, ws15_16, ws16_17, ws17_18],
+        semester: [ss15, ss16, ss17, ss18, ws15_16, ws16_17, ws17_18, ws18_19],
         pflicht: true,
         empfohlen: "",
         vertiefung: [],
         cp: 6,
-        dozent: ["Peter Göttel"],
+        dozent: ["Prof. hc. Peter Göttel"],
         nameLV: "Projektentwicklung und- Management: Teammanagement und Softskills in Projekten",
-        page: "0/sommersemester-2018-projektentwicklung-und-management-teammanagement-und-softskills-in-projekten.html",
+        page: "0/wintersemester-20182019-projektentwicklung-und-management-teammanagement-und-softskills-in-projek.html",
         specific: {
             WS15: {
                 lehrform: ["Projekt", "Seminar"],
@@ -1240,6 +1368,9 @@ const data = {
             WS16: {
                 lehrform: ["Projekt", "Seminar"],
                 page: "2016/wintersemester-20162017-projektentwicklung-und-management-teammanagement-und-softskills-in-projek.html",
+            },
+            SS18: {
+                page: "0/sommersemester-2018-projektentwicklung-und-management-teammanagement-und-softskills-in-projekten.html",
             },
             SS15: {
                 lehrform: ["Projekt", "Seminar"],
@@ -1293,6 +1424,20 @@ const data = {
         page: "2015/sommersemester-2015-prozessorientierte-informationssysteme-ii.html",
         specific: {}
     },
+    poispois: {
+        kurz: "POIS (POIS)",
+        lehrform: ["Vorlesung", "Übung"],
+        modul: ["SB3", "Vertiefungsgebiete"],
+        semester: [ws18_19],
+        pflicht: false,
+        empfohlen: "",
+        vertiefung: [BPET, SAMT],
+        cp: 6,
+        dozent: ["Dr. Luise Pufahl", "Kimon Batoulis"],
+        nameLV: "POIS (Prozessorientierte Informationssysteme)",
+        page: "0/wintersemester-20182019-pois-prozessorientierte-informationssysteme.html",
+        specific: {}
+    },
     privacyinpublicclouds: {
         kurz: "Privacy in Public Clouds",
         lehrform: ["Projekt", "Seminar"],
@@ -1319,6 +1464,20 @@ const data = {
                 page: "2016/sommersemester-2016-privacy-in-public-clouds.html",
             },
         }
+    },
+    probabilitytheory: {
+        kurz: "Probability Theory",
+        lehrform: ["Vorlesung", "Übung"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws18_19],
+        pflicht: false,
+        empfohlen: "",
+        vertiefung: [ISAE, OSIS, SAMT],
+        cp: 6,
+        dozent: ["Dr. Andreas Göbel", "Prof. Dr. Tobias Friedrich"],
+        nameLV: "Probability Theory",
+        page: "0/wintersemester-20182019-probability-theory.html",
+        specific: {}
     },
     processdriveniot: {
         kurz: "Process-driven IoT",
@@ -1362,6 +1521,20 @@ const data = {
         page: "2015/sommersemester-2015-programmierung-computergrafischer-verfahren-mit-c-und-opengl.html",
         specific: {}
     },
+    programmierungvonbenutzerschnittstellen: {
+        kurz: "Programmierung von<br />Benutzerschnittstellen",
+        lehrform: ["Vorlesung", "Übung"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws18_19],
+        pflicht: false,
+        empfohlen: "",
+        vertiefung: [HCGT, ISAE],
+        cp: 6,
+        dozent: ["Daniel Limberger", "Dr. Matthias Trapp"],
+        nameLV: "Programmierung von Benutzerschnittstellen",
+        page: "0/wintersemester-20182019-programmierung-von-benutzerschnittstellen.html",
+        specific: {}
+    },
     programminglanguages: {
         kurz: "Programming Languages",
         lehrform: ["Projekt", "Seminar"],
@@ -1380,18 +1553,22 @@ const data = {
         kurz: "PT I",
         lehrform: ["Vorlesung", "Übung"],
         modul: ["Grundlagen IT-Systems Engineering"],
-        semester: [ws15_16, ws16_17, ws17_18],
+        semester: [ws15_16, ws16_17, ws17_18, ws18_19],
         pflicht: true,
         empfohlen: 1,
         vertiefung: [],
         cp: 6,
-        dozent: ["Prof. Dr. Andreas Polze"],
+        dozent: ["Fabio Niephaus", "Johannes Henning", "Prof. Dr. Robert Hirschfeld", "Tobias Pape", "Toni Mattis"],
         nameLV: "Einführung in die Programmiertechnik I",
-        page: "0/wintersemester-20172018-einfuehrung-in-die-programmiertechnik-i.html",
+        page: "0/wintersemester-20182019-einfuehrung-in-die-programmiertechnik-i.html",
         specific: {
             WS15: {
                 dozent: ["Jens Lincke", "Johannes Henning", "Marcel Taeumel", "Prof. Dr. Robert Hirschfeld", "Stefan Ramson", "Tim Felgentreff", "Tobias Pape", "Toni Mattis"],
                 page: "2015/wintersemester-20152016-einfuehrung-in-die-programmiertechnik-i.html",
+            },
+            WS17: {
+                dozent: ["Prof. Dr. Andreas Polze"],
+                page: "0/wintersemester-20172018-einfuehrung-in-die-programmiertechnik-i.html",
             },
             WS16: {
                 dozent: ["Prof. Dr. Patrick Baudisch"],
@@ -1430,22 +1607,29 @@ const data = {
         kurz: "Recht I",
         lehrform: ["Vorlesung"],
         modul: ["Rechtliche und wirtschaftliche Grundlagen"],
-        semester: [ss15, ss16, ss17, ss18],
+        semester: [ss15, ss16, ss17, ss18, ws18_19],
         pflicht: true,
         empfohlen: 2,
         vertiefung: [],
         cp: 3,
-        dozent: ["Dr. Timm Krohn"],
+        dozent: ["Dr. Thomas Habbe"],
         nameLV: "Recht für Ingenieure I",
-        page: "0/sommersemester-2018-recht-fuer-ingenieure-i.html",
+        page: "0/wintersemester-20182019-recht-fuer-ingenieure-i.html",
         specific: {
+            SS18: {
+                dozent: ["Dr. Timm Krohn"],
+                page: "0/sommersemester-2018-recht-fuer-ingenieure-i.html",
+            },
             SS15: {
+                dozent: ["Dr. Timm Krohn"],
                 page: "2015/sommersemester-2015-recht-fuer-ingenieure-i.html",
             },
             SS17: {
+                dozent: ["Dr. Timm Krohn"],
                 page: "0/sommersemester-2017-recht-fuer-ingenieure-i.html",
             },
             SS16: {
+                dozent: ["Dr. Timm Krohn"],
                 page: "2016/sommersemester-2016-recht-fuer-ingenieure-i.html",
             },
         }
@@ -1454,24 +1638,26 @@ const data = {
         kurz: "Recht II",
         lehrform: ["Vorlesung"],
         modul: ["Rechtliche und wirtschaftliche Grundlagen"],
-        semester: [ws15_16, ws16_17, ws17_18],
+        semester: [ws15_16, ws16_17, ws17_18, ws18_19],
         pflicht: true,
         empfohlen: 3,
         vertiefung: [],
         cp: 3,
         dozent: ["Dr. Timm Krohn", "Prof. Dr. Jan Eickelberg"],
-        nameLV: "Recht für Ingenieure II - Rechtsfragen der Digitalisierung im Geschäftsverkehr",
-        page: "0/wintersemester-20172018-recht-fuer-ingenieure-ii-rechtsfragen-der-digitalisierung-im-geschaeftsverk.html",
+        nameLV: "Recht für Ingenieure II",
+        page: "0/wintersemester-20182019-recht-fuer-ingenieure-ii.html",
         specific: {
             WS15: {
                 dozent: ["Dr. Timm Krohn"],
                 page: "2015/wintersemester-20152016-recht-fuer-ingenieure-ii.html",
-                nameLV: "Recht für Ingenieure II",
+            },
+            WS17: {
+                page: "0/wintersemester-20172018-recht-fuer-ingenieure-ii-rechtsfragen-der-digitalisierung-im-geschaeftsverk.html",
+                nameLV: "Recht für Ingenieure II - Rechtsfragen der Digitalisierung im Geschäftsverkehr",
             },
             WS16: {
                 dozent: ["Dr. Timm Krohn"],
                 page: "2016/wintersemester-20162017-recht-fuer-ingenieure-ii.html",
-                nameLV: "Recht für Ingenieure II",
             },
         }
     },
@@ -1535,17 +1721,20 @@ const data = {
         kurz: "StubS",
         lehrform: ["Seminar"],
         modul: [],
-        semester: [ws15_16, ws16_17, ws17_18],
+        semester: [ws15_16, ws16_17, ws17_18, ws18_19],
         pflicht: false,
         empfohlen: "",
         vertiefung: [],
         cp: 0,
         dozent: ["Dr.-Ing. Ralf Wollowski"],
         nameLV: "Studienbegleitendes Seminar",
-        page: "0/wintersemester-20172018-studienbegleitendes-seminar.html",
+        page: "0/wintersemester-20182019-studienbegleitendes-seminar.html",
         specific: {
             WS15: {
                 page: "2015/wintersemester-20152016-studienbegleitendes-seminar.html",
+            },
+            WS17: {
+                page: "0/wintersemester-20172018-studienbegleitendes-seminar.html",
             },
             WS16: {
                 page: "2016/wintersemester-20162017-studienbegleitendes-seminar.html",
@@ -1556,18 +1745,21 @@ const data = {
         kurz: "SWA",
         lehrform: ["Vorlesung"],
         modul: ["Grundlagen IT-Systems Engineering"],
-        semester: [ws15_16, ws16_17, ws17_18],
+        semester: [ws15_16, ws16_17, ws17_18, ws18_19],
         pflicht: false,
         empfohlen: 3,
         vertiefung: [],
         cp: 6,
         dozent: ["Jens Lincke", "Johannes Henning", "Marcel Taeumel", "Patrick Rein", "Prof. Dr. Robert Hirschfeld", "Stefan Ramson", "Tobias Pape", "Toni Mattis"],
         nameLV: "Softwarearchitektur",
-        page: "0/wintersemester-20172018-softwarearchitektur.html",
+        page: "0/wintersemester-20182019-softwarearchitektur.html",
         specific: {
             WS15: {
                 dozent: ["Dr. Michael Perscheid", "Jens Lincke", "Johannes Henning", "Marcel Taeumel", "Patrick Rein", "Prof. Dr. Robert Hirschfeld", "Stefan Ramson", "Tim Felgentreff", "Tobias Pape"],
                 page: "2015/wintersemester-20152016-softwarearchitektur.html",
+            },
+            WS17: {
+                page: "0/wintersemester-20172018-softwarearchitektur.html",
             },
             WS16: {
                 dozent: ["Dr. Michael Perscheid", "Jens Lincke", "Johannes Henning", "Marcel Taeumel", "Patrick Rein", "Prof. Dr. Robert Hirschfeld", "Stefan Ramson", "Tim Felgentreff", "Tobias Pape"],
@@ -1618,16 +1810,16 @@ const data = {
     },
     swt2: {
         kurz: "SWT II",
-        lehrform: ["Vorlesung", "Übung"],
+        lehrform: ["Projekt", "Vorlesung"],
         modul: ["Vertiefungsgebiete"],
-        semester: [ws15_16, ws16_17, ws17_18],
+        semester: [ws15_16, ws16_17, ws17_18, ws18_19],
         pflicht: false,
         empfohlen: "",
         vertiefung: [BPET, OSIS, SAMT],
         cp: 6,
-        dozent: ["Dr. Matthias Uflacker"],
+        dozent: ["Arian Treffer", "Christoph Matthies", "Dr. Matthias Uflacker"],
         nameLV: "Softwaretechnik II - Agile Software Development in Large Teams",
-        page: "0/wintersemester-20172018-softwaretechnik-ii-agile-software-development-in-large-teams.html",
+        page: "0/wintersemester-20182019-softwaretechnik-ii-agile-software-development-in-large-teams.html",
         specific: {
             WS15: {
                 lehrform: ["Vorlesung"],
@@ -1635,7 +1827,14 @@ const data = {
                 page: "2015/wintersemester-20152016-softwaretechnik-ii.html",
                 nameLV: "Softwaretechnik II",
             },
+            WS17: {
+                lehrform: ["Vorlesung", "Übung"],
+                dozent: ["Dr. Matthias Uflacker"],
+                page: "0/wintersemester-20172018-softwaretechnik-ii-agile-software-development-in-large-teams.html",
+            },
             WS16: {
+                lehrform: ["Vorlesung", "Übung"],
+                dozent: ["Dr. Matthias Uflacker"],
                 page: "2016/wintersemester-20162017-softwaretechnik-ii-agile-software-development-in-large-teams.html",
             },
         }
@@ -1672,19 +1871,25 @@ const data = {
         kurz: "TI I",
         lehrform: ["Vorlesung", "Übung"],
         modul: ["Mathematische und theoretische Grundlagen"],
-        semester: [ws15_16, ws16_17, ws17_18],
+        semester: [ws15_16, ws16_17, ws17_18, ws18_19],
         pflicht: true,
         empfohlen: 3,
         vertiefung: [],
         cp: 6,
-        dozent: ["Prof. Dr. Tobias Friedrich"],
+        dozent: ["Dr. Timo Kötzing"],
         nameLV: "Theoretische Informatik I",
-        page: "0/wintersemester-20172018-theoretische-informatik-i.html",
+        page: "0/wintersemester-20182019-theoretische-informatik-i.html",
         specific: {
             WS15: {
+                dozent: ["Prof. Dr. Tobias Friedrich"],
                 page: "2015/wintersemester-20152016-theoretische-informatik-i.html",
             },
+            WS17: {
+                dozent: ["Prof. Dr. Tobias Friedrich"],
+                page: "0/wintersemester-20172018-theoretische-informatik-i.html",
+            },
             WS16: {
+                dozent: ["Prof. Dr. Tobias Friedrich"],
                 page: "2016/wintersemester-20162017-theoretische-informatik-i.html",
             },
         }
@@ -1692,7 +1897,7 @@ const data = {
     ti2: {
         kurz: "TI II",
         lehrform: ["Vorlesung", "Übung"],
-        modul: ["Mathematische und theoretische Grundlagen"],
+        modul: [],
         semester: [ss15, ss16, ss17, ss18],
         pflicht: true,
         empfohlen: 4,
@@ -1716,44 +1921,43 @@ const data = {
     },
     ueberzeugendpraesentieren: {
         kurz: "Überzeugend<br />Präsentieren",
-        lehrform: ["Seminar"],
+        lehrform: ["Blockseminar"],
         modul: ["Softskills"],
-        semester: [ss15, ss16, ss17, ss18, ws15_16, ws16_17, ws17_18],
+        semester: [ss15, ss16, ss17, ss18, ws15_16, ws16_17, ws17_18, ws18_19],
         pflicht: false,
         empfohlen: "",
         vertiefung: [],
         cp: 3,
         dozent: ["Dr. Werner Dieball"],
-        nameLV: "Überzeugend Präsentieren - Der erste Eindruck zählt ...!",
-        page: "0/sommersemester-2018-ueberzeugend-praesentieren-der-erste-eindruck-zaehlt.html",
+        nameLV: "Überzeugend Präsentieren - Der erste Eindruck zählt",
+        page: "0/wintersemester-20182019-ueberzeugend-praesentieren-der-erste-eindruck-zaehlt.html",
         specific: {
             WS15: {
-                lehrform: ["Blockseminar"],
                 page: "2015/wintersemester-20152016-ueberzeugend-praesentieren-der-erste-eindruck-zaehlt.html",
                 nameLV: "Überzeugend Präsentieren - der erste Eindruck zählt",
             },
             WS17: {
-                lehrform: ["Blockseminar"],
                 page: "0/wintersemester-20172018-ueberzeugend-praesentieren-der-erste-eindruck-zaehlt.html",
                 nameLV: "Überzeugend Präsentieren - der erste Eindruck zählt",
             },
             WS16: {
-                lehrform: ["Blockseminar"],
                 page: "2016/wintersemester-20162017-ueberzeugend-praesentieren-der-erste-eindruck-zaehlt.html",
                 nameLV: "Überzeugend Präsentieren - der erste Eindruck zählt",
             },
+            SS18: {
+                lehrform: ["Seminar"],
+                page: "0/sommersemester-2018-ueberzeugend-praesentieren-der-erste-eindruck-zaehlt.html",
+                nameLV: "Überzeugend Präsentieren - Der erste Eindruck zählt ...!",
+            },
             SS15: {
-                lehrform: ["Blockseminar"],
                 page: "2015/sommersemester-2015-ueberzeugend-praesentieren-der-erste-eindruck-zaehlt.html",
                 nameLV: "Überzeugend Präsentieren - der erste Eindruck zählt",
             },
             SS17: {
-                lehrform: ["Blockseminar"],
                 page: "0/sommersemester-2017-ueberzeugend-praesentieren-der-erste-eindruck-zaehlt.html",
                 nameLV: "Überzeugend Präsentieren - der erste Eindruck zählt",
             },
             SS16: {
-                lehrform: ["Blockseminar"],
                 page: "2016/sommersemester-2016-ueberzeugend-praesentieren-der-erste-eindruck-zaehlt.html",
                 nameLV: "Überzeugend Präsentieren - der erste Eindruck zählt",
             },
@@ -1825,9 +2029,23 @@ const data = {
             },
         }
     },
+    webentwicklung: {
+        kurz: "Webentwicklung",
+        lehrform: ["Projekt", "Seminar"],
+        modul: ["Vertiefungsgebiete"],
+        semester: [ws18_19],
+        pflicht: false,
+        empfohlen: "",
+        vertiefung: [BPET, HCGT, ISAE, OSIS],
+        cp: 3,
+        dozent: ["Martin Malchow", "Matthias Bauer", "Matthias Bauer"],
+        nameLV: "Webentwicklung mit Web Frameworks",
+        page: "0/wintersemester-20182019-webentwicklung-mit-web-frameworks.html",
+        specific: {}
+    },
     webprogrammierungundwebframeworks: {
         kurz: "Web-Programmierung<br />und Web-Frameworks",
-        lehrform: ["Projekt", "Seminar"],
+        lehrform: ["Projekt"],
         modul: ["Vertiefungsgebiete"],
         semester: [ws15_16, ws16_17, ws17_18],
         pflicht: false,
@@ -1877,19 +2095,25 @@ const data = {
         kurz: "Wirtschaft",
         lehrform: ["Vorlesung"],
         modul: ["Rechtliche und wirtschaftliche Grundlagen"],
-        semester: [ws15_16, ws16_17, ws17_18],
+        semester: [ws15_16, ws16_17, ws17_18, ws18_19],
         pflicht: true,
         empfohlen: 1,
         vertiefung: [],
-        cp: 6,
+        cp: 3,
         dozent: ["Prof. Dr. Katharina Hölzle"],
         nameLV: "Wirtschaftliche Grundlagen",
-        page: "0/wintersemester-20172018-wirtschaftliche-grundlagen.html",
+        page: "0/wintersemester-20182019-wirtschaftliche-grundlagen.html",
         specific: {
             WS15: {
+                cp: 6,
                 page: "2015/wintersemester-20152016-wirtschaftliche-grundlagen.html",
             },
+            WS17: {
+                cp: 6,
+                page: "0/wintersemester-20172018-wirtschaftliche-grundlagen.html",
+            },
             WS16: {
+                cp: 6,
                 page: "2016/wintersemester-20162017-wirtschaftliche-grundlagen.html",
             },
         }
