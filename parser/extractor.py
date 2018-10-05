@@ -101,7 +101,7 @@ def getLehrform(text):
 
 
 def getDozenten(text):
-    dataBlockRegex = re.compile(r"(?s)(?:Dozent|Lecturer): (.*?)<br")
+    dataBlockRegex = re.compile(r"(?s)(?:Dozent|Lecturer): (.*?)(?:<br|<p)")
     dataBlockMatch = re.search(dataBlockRegex, text)
     dataBlock = dataBlockMatch.group(1)
     subBlocks = dataBlock.split(", ")
@@ -122,7 +122,7 @@ def getDozenten(text):
 
 def getVertiefungAndModules(text):
     # Module extrahieren - ergibt zB die Vertiefungsgebiete
-    moduleBlockRegex = r"(?is)<h2>Modules?</h2>(.+?)</ul>"
+    moduleBlockRegex = r"(?is)<h2>(?:.+?)Modules?</h2>(?:.+?)IT-Systems Engineering BA(.+?)</ul>"
     moduleBlockMatch = re.search(moduleBlockRegex, text)
     vertiefung = set()
     modules = set()
