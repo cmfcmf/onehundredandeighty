@@ -139,7 +139,7 @@ def parseLVPage(url):
     shortName = extractor.shortenName(nameofLV)
     lvID = extractor.shortNameToID(shortName)
 
-    URL_PREFIX = 'https://hpi.de/studium/lehrveranstaltungen/it-systems-engineering-ma/lehrveranstaltung/course/0/'
+    URL_PREFIX = 'https://hpi.de/studium/lehrveranstaltungen/it-systems-engineering-ma/lehrveranstaltung/course/'
     niceURL = url
     if niceURL.startswith(URL_PREFIX):
         niceURL = niceURL[len(URL_PREFIX):]
